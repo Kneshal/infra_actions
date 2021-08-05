@@ -63,7 +63,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
-          # Выполняет pull образа с DockerHub 3
+          # Выполняет pull образа с DockerHub 4
           sudo docker pull knesh/infra_actions
           # Остановка всех контейнеров
           sudo docker stop $(sudo docker ps -a -q)

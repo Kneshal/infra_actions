@@ -64,7 +64,7 @@ jobs:
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
           # Выполняет pull образа с DockerHub
-          sudo docker pull knesh/infra_actions
-          # остановка всех контейнеров
+          sudo docker pull knesh/infra_actions:latest
+          # Остановка всех контейнеров
           sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 5000:5000 knesh/infra_actions
+          sudo docker run --rm -d -p 5000:5000 knesh/infra_actions:latest
